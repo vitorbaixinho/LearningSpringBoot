@@ -1,14 +1,18 @@
 package com.vbaixinho.learningspringboot.service;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.verify;
 
-import jersey.repackaged.com.google.common.collect.ImmutableList;
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -16,6 +20,8 @@ import org.mockito.MockitoAnnotations;
 import com.vbaixinho.learningspringboot.dao.FakeDataDao;
 import com.vbaixinho.learningspringboot.model.User;
 import com.vbaixinho.learningspringboot.model.User.Gender;
+
+import jersey.repackaged.com.google.common.collect.ImmutableList;
 
 public class UserServiceTest {
 

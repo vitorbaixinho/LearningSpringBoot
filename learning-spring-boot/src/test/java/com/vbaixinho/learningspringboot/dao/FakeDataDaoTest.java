@@ -7,7 +7,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.vbaixinho.learningspringboot.model.User;
 import com.vbaixinho.learningspringboot.model.User.Gender;
